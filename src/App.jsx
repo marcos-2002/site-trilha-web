@@ -1,19 +1,33 @@
 import Header from "./layout/Header"
 import { BrowserRouter, Routes, Route } from "react-router";
 import Home from "./pages/Home";
+import { IeeePathContext } from "./context/IeeePath";
+import { useState, useEffect } from "react";
 
 function App() {
+
+  const [ieeePath, setIeeePath] = useState([])
+  
+  useEffect(() => {
+          
+    fetch('/data/learning_path_data.json')
+    .then((res) => res.json())
+    .then((data) => setIeeePath(data.ieee_path))
+    .catch((error) => console.error(error))
+
+  }, [])
 
   return (
     <>
       <Header />
       <div className="my-10 mx-4 sm:mx-8 md:mx-16 lg:mx-32">
-        <BrowserRouter>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/etapa/:id" element={<App />} />
-          </Routes>
-        </BrowserRouter>
+        <IeeePathContext value={ieeePath}>
+          <BrowserRouter>
+            <Routes>
+              <Route path="/" element={<Home />} />
+            </Routes>
+          </BrowserRouter>
+        </IeeePathContext>
       </div>
     </>
   )

@@ -1,17 +1,12 @@
-import { useState, useEffect } from "react"
+import { useContext } from "react"
 import StageCards from "../components/StageCards"
+import { IeeePathContext } from "../context/IeeePath"
 
 export default function Home() {
 
-    const [ieeePath, setIeeePath] = useState("")
+    const ieeePath = useContext(IeeePathContext)
 
-    useEffect(() => {
-        
-        fetch('/data/learning_path_data.json')
-        .then((res) => res.json())
-        .then((data) => setIeeePath(data.ieee_path))
-    
-    }, [])
+    if (!ieeePath || ieeePath.length === 0) return <p>Carregando...</p>
 
     return(
         <>
