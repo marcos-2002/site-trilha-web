@@ -1,7 +1,7 @@
 {
-  "ieee_tracks": [
+  "ieee_path": [
     {
-      "subarea": "web",
+      "subarea": "Web",
       "stages": [
         {
           "id": 1,
@@ -21,7 +21,7 @@
           "id": 3,
           "stage_title": "3. Front-end com React",
           "image": "/assets/web/react.png",
-          "phase": 0,
+          "phase": 1,
           "modules": [
             {
               "id": 1,

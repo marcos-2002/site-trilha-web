@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router"
 
-export default function StageCards({stage_title, image, id_stage}) {
+export default function StageCards({stage_title, image, id_stage, phase}) {
 
   const navigate = useNavigate()
 
@@ -9,13 +9,17 @@ export default function StageCards({stage_title, image, id_stage}) {
       w-40 h-60
       sm:w-52 sm:h-64
       md:w-60 md:h-72
-      border border-[#00000021] rounded-xl shadow-md flex flex-col overflow-hidden
+      border border-[#00000021] rounded-xl shadow-md flex flex-col overflow-hidden 
     ">
 
       {/* cima */}
-      <div className="bg-[#80bbf3] h-3/5 flex items-center justify-center">
+      <div className={`h-3/5 flex items-center justify-center 
+        ${phase === 0 ? "bg-[#f5b1b1]" : 
+            phase === 1 ? "bg-[#f5f396]" : 
+              phase === 2 ? "bg-[#94f390]" : ''} `}
+      >
         <img 
-          src="/assets/web/server.png" 
+          src={image}
           className="w-12 sm:w-16 md:w-20" 
           alt="" 
         />
@@ -24,7 +28,7 @@ export default function StageCards({stage_title, image, id_stage}) {
       {/* baixo */}
       <div className="flex flex-col gap-2 items-center px-2 sm:px-3 md:px-4 py-3 flex-1">
         <p className="text-center text-xs sm:text-sm md:text-base">
-          Introdução ao Desenvolvimento Web
+          {stage_title}
         </p>
 
         <button className="
