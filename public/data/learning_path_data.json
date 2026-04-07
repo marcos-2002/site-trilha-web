@@ -1,0 +1,202 @@
+{
+  "ieee_tracks": [
+    {
+      "subarea": "web",
+      "stages": [
+        {
+          "id": 1,
+          "stage_title": "1. Introdução ao Desenvolvimento Web",
+          "image": "/assets/web/world2.png",
+          "phase": 0,
+          "modules": []
+        },
+        {
+          "id": 2,
+          "stage_title": "2. Tópicos Avançados em JavaScript",
+          "image": "/assets/web/js.png",
+          "phase": 0,
+          "modules": []
+        },
+        {
+          "id": 3,
+          "stage_title": "3. Front-end com React",
+          "image": "/assets/web/react.png",
+          "phase": 0,
+          "modules": [
+            {
+              "id": 1,
+              "text_module_link": "/content/3_react_mod_1.pdf",
+              "video_lessons": [
+                {
+                  "id": 1,
+                  "lesson_title": "O que é React?",
+                  "lesson_video_link": "...",
+                  "next": 2
+                },
+                {
+                  "id": 2,
+                  "lesson_title": "Componentização",
+                  "lesson_video_link": "...",
+                  "next": 3
+                },
+                {
+                  "id": 3,
+                  "lesson_title": "DOM Virtual",
+                  "lesson_video_link": "...",
+                  "next": null
+                }
+              ]
+            },
+            {
+              "id": 2,
+              "text_module_link": "/content/3_react_mod_2.pdf",
+              "video_lessons": [
+                {
+                  "id": 1,
+                  "lesson_title": "Instalando o Vite e Criando um Projeto",
+                  "lesson_video_link": "...",
+                  "next": 2
+                },
+                {
+                  "id": 2,
+                  "lesson_title": "Estrutura Básica de um Projeto React",
+                  "lesson_video_link": "...",
+                  "next": 3
+                },
+                {
+                  "id": 3,
+                  "lesson_title": "Componentizando elementos",
+                  "lesson_video_link": "...",
+                  "next": null
+                }
+              ]
+            },
+            {
+              "id": 3,
+              "text_module_link": "/content/3_react_mod_3.pdf",
+              "video_lessons": [
+                {
+                  "id": 1,
+                  "lesson_title": "Introdução a APIs",
+                  "lesson_video_link": "...",
+                  "next": 2
+                },
+                {
+                  "id": 2,
+                  "lesson_title": "Operações Assíncronas pt. 1",
+                  "lesson_video_link": "...",
+                  "next": 3
+                },
+                {
+                  "id": 3,
+                  "lesson_title": "Operações Assíncronas pt. 2 - Promises",
+                  "lesson_video_link": "...",
+                  "next": 4
+                },
+                {
+                  "id": 4,
+                  "lesson_title": "Operações Assíncronas pt. 3 - async functions",
+                  "lesson_video_link": "...",
+                  "next": 5
+                },
+                {
+                  "id": 5,
+                  "lesson_title": "Criando uma Requisição à API pt. 1 - Configurando o ambiente",
+                  "lesson_video_link": "...",
+                  "next": 6
+                },
+                {
+                  "id": 6,
+                  "lesson_title": "Criando uma Requisição à API pt. 2 - GET",
+                  "lesson_video_link": "...",
+                  "next": 7
+                },
+                {
+                  "id": 7,
+                  "lesson_title": "Criando uma Requisição à API pt. 3 - POST",
+                  "lesson_video_link": "...",
+                  "next": 8
+                },
+                {
+                  "id": 8,
+                  "lesson_title": "Criando uma Requisição à API pt. 4 - PUT",
+                  "lesson_video_link": "...",
+                  "next": 9
+                },
+                {
+                  "id": 9,
+                  "lesson_title": "Criando uma Requisição à API pt. 5 - DELETE",
+                  "lesson_video_link": "...",
+                  "next": null
+                }
+              ]
+            },
+            {
+              "id": 4,
+              "text_module_link": "/content/3_react_mod_4.pdf",
+              "video_lessons": [
+                {
+                  "id": 1,
+                  "lesson_title": "O que é um Hook?",
+                  "lesson_video_link": "...",
+                  "next": 2
+                },
+                {
+                  "id": 2,
+                  "lesson_title": "Variáveis de Estado com useState",
+                  "lesson_video_link": "...",
+                  "next": 3
+                },
+                {
+                  "id": 3,
+                  "lesson_title": "Efeitos Colaterais com useEffect",
+                  "lesson_video_link": "...",
+                  "next": 4
+                },
+                {
+                  "id": 4,
+                  "lesson_title": "React Router pt. 1: Introdução e Roteamento",
+                  "lesson_video_link": "...",
+                  "next": 5
+                },
+                {
+                  "id": 5,
+                  "lesson_title": "React Router pt. 2: Navegando com useNavigate",
+                  "lesson_video_link": "...",
+                  "next": 6
+                },
+                {
+                  "id": 6,
+                  "lesson_title": "Gestão de Contexto com useContext",
+                  "lesson_video_link": "...",
+                  "next": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "stage_title": "4. Introdução a Servidores Web",
+          "image": "/assets/web/server.png",
+          "phase": 0,
+          "modules": []
+        },
+        {
+          "id": 5,
+          "stage_title": "5. Introdução a Bancos de Dados",
+          "image": "/assets/web/database2.png",
+          "phase": 0,
+          "modules": []
+        },
+        {
+          "id": 6,
+          "stage_title": "6. Back-end com Node e Express",
+          "image": "/assets/web/node.png",
+          "phase": 0,
+          "modules": []
+        }
+      ]
+    }
+  ]
+}

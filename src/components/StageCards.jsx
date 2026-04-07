@@ -1,4 +1,9 @@
-export default function StageCards({stage_title, image, stage}) {
+import { useNavigate } from "react-router"
+
+export default function StageCards({stage_title, image, id_stage}) {
+
+  const navigate = useNavigate()
+
   return (
     <div className="
       w-40 h-60
@@ -30,7 +35,8 @@ export default function StageCards({stage_title, image, stage}) {
           text-xs sm:text-sm
           hover:bg-[#083d6e]
           cursor-pointer
-        ">
+        "
+        onClick={() => navigate(`/stage/${id_stage}`)}>
           Ver módulos
         </button>
       </div>
