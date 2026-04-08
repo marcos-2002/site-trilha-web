@@ -1,6 +1,9 @@
 import { useContext, useState } from "react"
 import { IeeePathContext } from "../context/IeeePath"
-import { useParams } from "react-router"
+import { useNavigate, useParams } from "react-router"
+import { IoIosArrowDropdownCircle } from "react-icons/io"
+import { IoIosArrowDropupCircle } from "react-icons/io";
+
 
 
 export default function Stage() {
@@ -10,6 +13,8 @@ export default function Stage() {
     const ieeePath = useContext(IeeePathContext)
 
     const [openId, setOpenId] = useState(null)
+
+    const navigate = useNavigate()
 
     return (
         <>
@@ -24,30 +29,58 @@ export default function Stage() {
                     {ieeePath[0].stages[id_etapa-1].phase === 0 
                         ? (
                             <>
-                                <spam className='font-bold'>Status da etapa:</spam> A parte escrita desta etapa ainda se está em elaboração
+                                <span className='font-bold'>Status da etapa:</span> A parte escrita desta etapa ainda se está em elaboração
                             </>
                         ) 
                         : ieeePath[0].stages[id_etapa-1].phase === 1 
                             ? (
                                 <>
-                                    <spam className='font-bold'>Status da etapa:</spam> A parte escrita desta etapa está concluída e os vídeos estão em gravação
+                                    <span className='font-bold'>Status da etapa:</span> A parte escrita desta etapa está concluída e os vídeos estão em gravação
                                 </>
                             ) 
                             : ''}
                 </p>
             </div>
 
-            <nav className="flex flex-col items-center">
+            <nav className="flex flex-col w-full max-w-3xl mx-auto border-2 border-[#00000023] rounded-lg overflow-hidden">
                 {ieeePath[0].stages[id_etapa-1].modules.map((module) => (
                     <ul key={module.id}>
-                        <li>
-                            <button className="cursor-pointer bg-[#0E5FAB] hover:bg-[#205280] font-semibold border-b border-[#27649D] text-white w-3xl text-left p-1" onClick={() =>setOpenId(openId === module.id ? null : module.id)}>
-                                {`Módulo ${module.id}`}
-                            </button>
+                        <li className="border-b-2 border-t border-[#00000023] group" onClick={() =>setOpenId(openId === module.id ? null : module.id)}>
+                            <div className="flex justify-between items-center px-10 py-4 
+                                    cursor-pointer">    
+                                <div>    
+                                    <button 
+                                        className="
+                                            text-left 
+                                            w-full 
+                                            group-hover:text-[#0D5FAA]" 
+                                    >
+                                        {`Módulo ${module.id}`}
+                                    </button>
+                                    <p className="pt-1 text-xs font-semibold text-gray-400">
+                                        {module.video_lessons.length} Aulas
+                                    </p>
+                                </div>
+                                <div className="flex items-center gap-1">
+                                    {openId === module.id ? <IoIosArrowDropupCircle color="#0D5FAA" /> : <IoIosArrowDropdownCircle color="#0D5FAA" />}
+                                    <p className="text-sm text-[#0D5FAA]">{openId === module.id ? 'Fechar' : 'Ver aulas'}</p>
+                                </div>
+                            </div>
                             <div className={`duration-300 ease-in-out grid ${openId === module.id ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'}`}>
-                                <ul className="overflow-hidden">
-                                    {module.video_lessons.map((video) => (
-                                        <li className="p-1 cursor-pointer hover:bg-[#5391CB] hover:text-white border-b border-blue-50">{video.lesson_title}</li>
+                                <ul className="overflow-hidden px-10">
+                                    {module.video_lessons.map((video, index) => (
+                                        <li 
+                                            className={`
+                                                py-3 
+                                                cursor-pointer 
+                                                hover:text-[#0D5FAA] 
+                                                
+                                                ${index !== module.video_lessons.length - 1 ? "border-b border-[#00000023]" : ""}
+                                            `} 
+                                            key={video.id}
+                                        >
+                                            Aula {video.id} - {video.lesson_title}
+                                        </li>
                                     ))}
                                 </ul>
                             </div>
