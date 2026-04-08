@@ -13,8 +13,8 @@ export default function Home() {
             {ieeePath.length > 0 && (
                 <>
                     <h1 className="text-xl sm:text-2xl mb-1 font-bold leading-relaxed text-center">
-                        Bem-vindo à trilha de aprendizado da subárea 
-                        <span className="text-blue-600">{ieeePath[0].subarea}</span> do 
+                        Bem-vindo à trilha de aprendizado da subárea
+                        <span className="text-blue-600"> {ieeePath[0].subarea}</span> do 
                         <span className="font-extrabold">WolfByte</span>! 
                     </h1>
 

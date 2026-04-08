@@ -1,6 +1,7 @@
 import Header from "./layout/Header"
 import { BrowserRouter, Routes, Route } from "react-router";
 import Home from "./pages/Home";
+import Stage from "./pages/Stage";
 import { IeeePathContext } from "./context/IeeePath";
 import { useState, useEffect } from "react";
 
@@ -25,6 +26,7 @@ function App() {
           <BrowserRouter>
             <Routes>
               <Route path="/" element={<Home />} />
+              <Route path="/etapa/:id_etapa" element={<Stage />} />
             </Routes>
           </BrowserRouter>
         </IeeePathContext>
