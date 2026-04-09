@@ -21,7 +21,7 @@ export default function Stage() {
             <h1 className="text-xl sm:text-2xl mb-1 font-bold leading-relaxed text-center">{ieeePath[0].stages[id_etapa-1].stage_title}</h1>
 
             <p className="text-center mb-16 text-xs sm:text-sm">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam quidem impedit quasi voluptatum voluptatem nihil temporibus voluptate omnis cum dolorem doloremque quas perferendis, officiis a distinctio voluptas maxime, explicabo iste. Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio natus cum non eligendi fugit quod, tempore neque facilis, tempora quo fuga repellendus dolorum et iusto officiis ab nihil nam odit?
+                {ieeePath[0].stages[id_etapa-1].description}
             </p>
 
             <div>
