@@ -3,6 +3,7 @@ import { IeeePathContext } from "../context/IeeePath"
 import { useNavigate, useParams } from "react-router"
 import { IoIosArrowDropdownCircle } from "react-icons/io"
 import { IoIosArrowDropupCircle } from "react-icons/io";
+import { PiWarningCircleLight } from "react-icons/pi";
 
 
 
@@ -20,7 +21,7 @@ export default function Stage() {
         <>
             <h1 className="text-xl sm:text-2xl mb-1 font-bold leading-relaxed text-center">{ieeePath[0].stages[id_etapa-1].stage_title}</h1>
 
-            <p className="text-center mb-16 text-xs sm:text-sm">
+            <p className="text-center mb-16 text-xs sm:text-base">
                 {ieeePath[0].stages[id_etapa-1].description}
             </p>
 
@@ -42,11 +43,11 @@ export default function Stage() {
                 </p>
             </div>
 
-            <nav className="flex flex-col w-full max-w-3xl mx-auto border-2 border-[#00000023] rounded-lg overflow-hidden">
+            <nav className="flex flex-col gap-3 w-full max-w-3xl mx-auto  overflow-hidden pt-13 border-t border-[#00000023] ">
                 {ieeePath[0].stages[id_etapa - 1].modules.map((module) => (
                     <ul key={module.id} className="w-full">
                     <li
-                        className="border-b border-[#00000023] group"
+                        className="group border border-[#00000023] shadow rounded-lg"
                         onClick={() =>
                         setOpenId(openId === module.id ? null : module.id)
                         }
@@ -63,7 +64,8 @@ export default function Stage() {
                             className="
                                 text-left w-full 
                                 text-sm sm:text-base
-                                group-hover:text-[#0D5FAA]
+                                text-[#0D5FAA]
+                                font-bold
                             "
                             >
                             {`Módulo ${module.id}`}
@@ -94,32 +96,45 @@ export default function Stage() {
                             : "grid-rows-[0fr]"
                         }`}
                         >
-                        <ul className="overflow-hidden px-4 sm:px-6 md:px-10">
-                            {module.video_lessons.map((video, index) => (
-                            <li
-                                key={video.id}
-                                className={`
-                                py-3 
-                                cursor-pointer 
-                                hover:text-[#0D5FAA] 
-                                text-xs sm:text-sm
-                                ${
-                                    index !== module.video_lessons.length - 1
-                                    ? "border-b border-[#00000023]"
-                                    : ""
-                                }
-                                `}
-                                onClick={() => navigate(`/etapa/${id_etapa}/modulo/${module.id}/aula/${video.id}`)}
-                            >
-                                Aula {video.id} - {video.lesson_title}
-                            </li>
-                            ))}
-                        </ul>
+                            <ul className="overflow-hidden px-4 sm:px-6 md:px-10">
+                                {module.video_lessons.map((video, index) => (
+                                <li
+                                    key={video.id}
+                                    className={`
+                                    py-3 
+                                    cursor-pointer 
+                                    hover:text-[#0D5FAA] 
+                                    text-xs sm:text-sm
+                                    ${
+                                        index !== module.video_lessons.length - 1
+                                        ? "border-b border-[#00000023]"
+                                        : ""
+                                    }
+                                    `}
+                                    onClick={() => navigate(`/etapa/${id_etapa}/modulo/${module.id}/aula/${video.id}`)}
+                                >
+                                    Aula {video.id} - {video.lesson_title}
+                                </li>
+                                ))}
+                            </ul>
                         </div>
                     </li>
                     </ul>
                 ))}
                 </nav>
+                {ieeePath[0].stages[id_etapa - 1].modules.length === 0 && (
+                    <>
+                        <div className="flex flex-col items-center gap-3 sm:gap-5 mt-6 sm:mt-10 px-4 text-center">
+                            <PiWarningCircleLight 
+                                className="text-[#f86161] text-3xl sm:text-4xl md:text-5xl" 
+                            />
+
+                            <p className="text-[#000000a2] text-sm sm:text-base md:text-lg font-semibold max-w-xs sm:max-w-md">
+                                Conteúdo em desenvolvimento. Volte em breve!
+                            </p>
+                        </div>
+                    </>
+                )}
         </>
     )
 }

@@ -2,6 +2,7 @@ import { useContext } from "react"
 import { IeeePathContext } from "../context/IeeePath"
 import { useParams } from "react-router"
 import LessonNavigation from "../components/LessonNavigation";
+import { HiOutlinePlayCircle } from "react-icons/hi2";
 
 export default function VideoLeassons() {
 
@@ -51,7 +52,7 @@ export default function VideoLeassons() {
                                 {/* VIDEO RESPONSIVO */}
                                 <div className="w-full max-w-3xl aspect-video">
                                     <iframe 
-                                        className="w-full h-full rounded-md"
+                                        className="w-full h-full rounded-xl"
                                         src={ieeePath[0].stages[id_etapa-1].modules[id_modulo-1].video_lessons[id_aula-1].lesson_video_link} 
                                         title="YouTube video player" 
                                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -89,6 +90,15 @@ export default function VideoLeassons() {
                                 Baixar módulo
                             </a>
 
+                            <div className="w-full max-w-3xl aspect-video bg-gray-200 rounded-xl flex flex-col items-center justify-center gap-1 sm:gap-2 text-center px-4">
+    
+                                <HiOutlinePlayCircle className="text-gray-400 text-4xl sm:text-6xl md:text-8xl" />
+
+                                <p className="text-gray-400 text-sm sm:text-lg md:text-2xl font-semibold">
+                                    Vídeo em breve
+                                </p>
+
+                            </div>
                             <LessonNavigation prev={prev} next={next} id_etapa={id_etapa} id_modulo={id_modulo} />
                         </>
                 )}
