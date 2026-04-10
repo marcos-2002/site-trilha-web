@@ -5,6 +5,7 @@ import Stage from "./pages/Stage";
 import VideoLeassons from "./pages/VideoLeassons";
 import { IeeePathContext } from "./context/IeeePath";
 import { useState, useEffect } from "react";
+import Footer from "./layout/Footer";
 
 function App() {
 
@@ -26,15 +27,18 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        <Header />
-        <div className="my-10 mx-4 sm:mx-8 md:mx-16 lg:mx-32">
-          <IeeePathContext value={ieeePath}>
-              <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/etapa/:id_etapa" element={<Stage />} />
-                <Route path="/etapa/:id_etapa/modulo/:id_modulo/aula/:id_aula" element={<VideoLeassons />} />
-              </Routes>
-          </IeeePathContext>
+        <div className="min-h-screen flex flex-col">
+          <Header />
+          <main className="flex-1 my-10 mx-4 sm:mx-8 md:mx-16 lg:mx-32">
+            <IeeePathContext value={ieeePath}>
+                <Routes>
+                  <Route path="/" element={<Home />} />
+                  <Route path="/etapa/:id_etapa" element={<Stage />} />
+                  <Route path="/etapa/:id_etapa/modulo/:id_modulo/aula/:id_aula" element={<VideoLeassons />} />
+                </Routes>
+            </IeeePathContext>
+          </main>
+          <Footer />
         </div>
       </BrowserRouter>
     </>
