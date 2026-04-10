@@ -32,7 +32,7 @@ export default function LessonNavigation({prev, next, id_etapa, id_modulo}) {
                         text-sm sm:text-base 
                         text-[#0D5FAA] hover:text-[#083d6e]
                         flex items-center justify-center gap-2
-                        border-y sm:border-y-0 sm:border-x
+                        border-y sm:border-y-0 sm:border-x border-[#00000021]
                         cursor-pointer
                     "
                     onClick={() => navigate(`/etapa/${id_etapa}`)}

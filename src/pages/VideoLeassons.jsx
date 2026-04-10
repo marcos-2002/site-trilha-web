@@ -3,6 +3,7 @@ import { IeeePathContext } from "../context/IeeePath"
 import { useParams } from "react-router"
 import LessonNavigation from "../components/LessonNavigation";
 import { HiOutlinePlayCircle } from "react-icons/hi2";
+import { FiDownload } from "react-icons/fi";
 
 export default function VideoLeassons() {
 
@@ -30,6 +31,8 @@ export default function VideoLeassons() {
                             <p className="mb-8 sm:mb-10 text-center max-w-xl">
                                 Se preferir, também é possível baixar o PDF completo do módulo com todas as aulas.
                             </p>
+                            <div className="flex items-center justify-center gap-2">
+
                             
                             <a className="
                                 mb-8 sm:mb-10
@@ -40,13 +43,15 @@ export default function VideoLeassons() {
                                 text-sm sm:text-base
                                 hover:bg-[#083d6e]
                                 w-full sm:w-auto text-center
+                                
                                 "
                                 href={ieeePath[0].stages[id_etapa-1].modules[id_modulo-1].text_module_link}
                                 download={`modulo_${id_modulo}.pdf`}
                             >
-                                Baixar módulo
+                                 Baixar módulo
                             </a>
-
+                            <LuDownload size={20} color="black"/>
+                            </div>
                             <div className="flex flex-col items-center gap-4 w-full">
                                 
                                 {/* VIDEO RESPONSIVO */}
@@ -83,10 +88,12 @@ export default function VideoLeassons() {
                                 text-sm sm:text-base
                                 hover:bg-[#083d6e]
                                 w-full sm:w-auto text-center
+                                flex items-center justify-center gap-2
                                 "
                                 href={ieeePath[0].stages[id_etapa-1].modules[id_modulo-1].text_module_link}
                                 download={`modulo_${id_modulo}.pdf`}
                             >
+                                <FiDownload />
                                 Baixar módulo
                             </a>
 
