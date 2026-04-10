@@ -19,6 +19,10 @@ function App() {
 
   }, [])
 
+  if (ieeePath.length === 0) {
+    return <p>Carregando...</p>;
+  }
+
   return (
     <>
       <BrowserRouter>
