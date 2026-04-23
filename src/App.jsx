@@ -13,7 +13,7 @@ function App() {
   
   useEffect(() => {
           
-    fetch('/data/learning_path_data.json')
+    fetch('https://marcos-2002.github.io/site-trilha-web/data/learning_path_data.json')
     .then((res) => res.json())
     .then((data) => setIeeePath(data.ieee_path))
     .catch((error) => console.error(error))

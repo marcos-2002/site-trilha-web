@@ -7,7 +7,7 @@ export default function Header() {
 
   return (
     <header className="bg-[#0D5FAA] flex justify-center">
-      <div className='flex flex-col sm:flex-row gap-2 sm:gap-3 justify-center items-center py-3 sm:py-4 w-fit cursor-pointer' onClick={() => navigate("/")}>
+      <div className='flex flex-col sm:flex-row gap-2 sm:gap-3 justify-center items-center py-3 sm:py-4 w-fit cursor-pointer' onClick={() => navigate("/site-trilha-web")}>
         <img 
           src={LogoPrincipal} 
           alt="Logo" 
