@@ -18,7 +18,7 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
       md:w-60 md:h-72\r
       border border-[#00000021] rounded-xl shadow-md flex flex-col overflow-hidden \r
     `,children:[(0,A.jsx)(`div`,{className:`h-3/5 flex items-center justify-center 
-        ${r===0?`bg-[#f5b1b1]`:r===1?`bg-[#f5f396]`:r===2?`bg-[#94f390]`:``} `,children:(0,A.jsx)(`img`,{src:t,className:`w-12 sm:w-16 md:w-20`,alt:``})}),(0,A.jsxs)(`div`,{className:`flex flex-col gap-2 items-center px-2 sm:px-3 md:px-4 py-3 flex-1`,children:[(0,A.jsx)(`p`,{className:`text-center text-xs sm:text-sm md:text-base`,children:e}),(0,A.jsx)(`button`,{className:`\r
+        ${r===0?`bg-[#f5b1b1]`:r===1?`bg-[#f5f396]`:r===2?`bg-[#94f390]`:``} `,children:(0,A.jsx)(`img`,{src:`/site-trilha-web/`+t,className:`w-12 sm:w-16 md:w-20`,alt:``})}),(0,A.jsxs)(`div`,{className:`flex flex-col gap-2 items-center px-2 sm:px-3 md:px-4 py-3 flex-1`,children:[(0,A.jsx)(`p`,{className:`text-center text-xs sm:text-sm md:text-base`,children:e}),(0,A.jsx)(`button`,{className:`\r
           mt-auto\r
           bg-[#0D5FAA] text-white \r
           px-4 sm:px-6 md:px-10 \r
