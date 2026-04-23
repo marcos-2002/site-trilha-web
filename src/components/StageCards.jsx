@@ -19,7 +19,7 @@ export default function StageCards({stage_title, image, id_stage, phase}) {
               phase === 2 ? "bg-[#94f390]" : ''} `}
       >
         <img 
-          src={image}
+          src={import.meta.env.BASE_URL + image}
           className="w-12 sm:w-16 md:w-20" 
           alt="" 
         />
