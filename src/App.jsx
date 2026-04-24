@@ -29,6 +29,9 @@ function App() {
       .finally(() => setLoading(false))
   }, [])
 
+
+  console.log(ieeePath)
+
   if (loading) {
     return <p>Carregando...</p>
   }
@@ -46,8 +49,8 @@ function App() {
             <IeeePathContext value={ieeePath}>
                 <Routes>
                   <Route path="/site-trilha-web" element={<Home />} />
-                  <Route path="/etapa/:id_etapa" element={<Stage />} />
-                  <Route path="/etapa/:id_etapa/modulo/:id_modulo/aula/:id_aula" element={<VideoLeassons />} />
+                  <Route path="/site-trilha-web/etapa/:id_etapa" element={<Stage />} />
+                  <Route path="/site-trilha-web/etapa/:id_etapa/modulo/:id_modulo/aula/:id_aula" element={<VideoLeassons />} />
                 </Routes>
             </IeeePathContext>
           </main>

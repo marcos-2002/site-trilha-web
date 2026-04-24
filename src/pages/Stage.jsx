@@ -111,7 +111,7 @@ export default function Stage() {
                                         : ""
                                     }
                                     `}
-                                    onClick={() => navigate(`/etapa/${id_etapa}/modulo/${module.id}/aula/${video.id}`)}
+                                    onClick={() => navigate(`/site-trilha-web/etapa/${id_etapa}/modulo/${module.id}/aula/${video.id}`)}
                                 >
                                     Aula {video.id} - {video.lesson_title}
                                 </li>

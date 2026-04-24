@@ -14,6 +14,8 @@ export default function VideoLeassons() {
     const prev = ieeePath[0].stages[id_etapa-1].modules[id_modulo-1].video_lessons[id_aula-1].prev
     const next = ieeePath[0].stages[id_etapa-1].modules[id_modulo-1].video_lessons[id_aula-1].next
 
+    console.log(ieeePath[0].stages[id_etapa-1].modules[id_modulo-1].video_lessons[id_aula-1])
+
     return (
         <>
             <div className="flex flex-col items-center px-2 sm:px-0">
@@ -45,12 +47,12 @@ export default function VideoLeassons() {
                                 w-full sm:w-auto text-center
                                 
                                 "
-                                href={ieeePath[0].stages[id_etapa-1].modules[id_modulo-1].text_module_link}
+                                href={import.meta.env.BASE_URL+ieeePath[0].stages[id_etapa-1].modules[id_modulo-1].text_module_link}
                                 download={`modulo_${id_modulo}.pdf`}
                             >
                                  Baixar módulo
                             </a>
-                            <LuDownload size={20} color="black"/>
+                            <FiDownload size={20} color="black"/>
                             </div>
                             <div className="flex flex-col items-center gap-4 w-full">
                                 
@@ -90,7 +92,7 @@ export default function VideoLeassons() {
                                 w-full sm:w-auto text-center
                                 flex items-center justify-center gap-2
                                 "
-                                href={ieeePath[0].stages[id_etapa-1].modules[id_modulo-1].text_module_link}
+                                href={import.meta.env.BASE_URL+ieeePath[0].stages[id_etapa-1].modules[id_modulo-1].text_module_link}
                                 download={`modulo_${id_modulo}.pdf`}
                             >
                                 <FiDownload />
