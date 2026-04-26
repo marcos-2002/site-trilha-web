@@ -42,15 +42,15 @@ function App() {
 
   return (
     <>
-      <BrowserRouter>
+      <BrowserRouter basename="/site-trilha-web/">
         <div className="min-h-screen flex flex-col">
           <Header />
           <main className="flex-1 my-10 mx-4 sm:mx-8 md:mx-16 lg:mx-32">
             <IeeePathContext value={ieeePath}>
                 <Routes>
-                  <Route path="/site-trilha-web" element={<Home />} />
-                  <Route path="/site-trilha-web/etapa/:id_etapa" element={<Stage />} />
-                  <Route path="/site-trilha-web/etapa/:id_etapa/modulo/:id_modulo/aula/:id_aula" element={<VideoLeassons />} />
+                  <Route path="/" element={<Home />} />
+                  <Route path="/etapa/:id_etapa" element={<Stage />} />
+                  <Route path="/etapa/:id_etapa/modulo/:id_modulo/aula/:id_aula" element={<VideoLeassons />} />
                 </Routes>
             </IeeePathContext>
           </main>

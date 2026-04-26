@@ -19,7 +19,7 @@ export default function LessonNavigation({prev, next, id_etapa, id_modulo}) {
                         flex items-center justify-center gap-2
                         cursor-pointer
                     `}
-                    onClick={() => prev !== null ? navigate(`/site-trilha-web/etapa/${id_etapa}/modulo/${id_modulo}/aula/${prev}`) : ''}
+                    onClick={() => prev !== null ? navigate(`/etapa/${id_etapa}/modulo/${id_modulo}/aula/${prev}`) : ''}
                 >
                     <IoIosArrowBack /> Aula anterior
                 </button>
@@ -35,7 +35,7 @@ export default function LessonNavigation({prev, next, id_etapa, id_modulo}) {
                         border-y sm:border-y-0 sm:border-x border-[#00000021]
                         cursor-pointer
                     "
-                    onClick={() => navigate(`/site-trilha-web/etapa/${id_etapa}`)}
+                    onClick={() => navigate(`/etapa/${id_etapa}`)}
                 >
                     Voltar para Módulos
                 </button>
@@ -49,7 +49,7 @@ export default function LessonNavigation({prev, next, id_etapa, id_modulo}) {
                         flex items-center justify-center gap-2
                         cursor-pointer
                     `}
-                    onClick={() => next !== null ? navigate(`/site-trilha-web/etapa/${id_etapa}/modulo/${id_modulo}/aula/${next}`) : ''}
+                    onClick={() => next !== null ? navigate(`/etapa/${id_etapa}/modulo/${id_modulo}/aula/${next}`) : ''}
                 >
                     Próxima aula <IoIosArrowForward />
                 </button>

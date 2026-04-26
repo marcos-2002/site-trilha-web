@@ -40,7 +40,7 @@ export default function StageCards({stage_title, image, id_stage, phase}) {
           hover:bg-[#083d6e]
           cursor-pointer
         "
-        onClick={() => navigate(`/site-trilha-web/etapa/${id_stage}`)}>
+        onClick={() => navigate(`/etapa/${id_stage}`)}>
           Ver módulos
         </button>
       </div>
