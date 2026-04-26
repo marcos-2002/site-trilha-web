@@ -29,10 +29,10 @@ Siga os passos abaixo para rodar o projeto localmente:
 
 ```bash
 # Clone o repositório
-git clone https://github.com/seu-usuario/seu-repositorio.git
+git clone https://github.com/marcos-2002/site-trilha-web.git
 
 # Acesse a pasta do projeto
-cd seu-repositorio
+cd site-trilha-web
 
 # Instale as dependências
 npm install
